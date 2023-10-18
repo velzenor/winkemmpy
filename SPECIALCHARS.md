@@ -1,5 +1,7 @@
 # Special Characters
-A list of all valid special characters is presented here. This list can also be accessed from within Python via the `SPECIALCHARS` or `SPECIALCHARS_DESCRIPTIONS` module constants.
+A list of all valid special characters is presented here. 
+
+This list can also be accessed from within Python via the `SPECIALCHARS` or `SPECIALCHARS_DESCRIPTIONS` module constants.
 
 &nbsp;
 
