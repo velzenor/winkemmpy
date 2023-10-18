@@ -10,11 +10,29 @@ Caveat: The exported bat file uses Powershell to implement the keyboard simulati
 
 ## Usage Examples
 ### Basic
+An example using all four action functions: `type`, `wait`, `hold`, and `lift`.
 ```python
+import winkemmpy as kemm
 
+# Create a keyboard macro object
+km = kemm.KeyboardMacro()
+
+# Give the macro some instructions
+km.type("hello Alice{enter}") # The macro will type 'hello Alice' and then press the enter key
+km.wait(5) # The macro will wait 5 seconds
+km.hold("shift") # The macro will hold down the shift key
+km.type("hi Bob") # Since the shift key is held, the macro will type 'HI BOB'
+km.lift("shift") # The macro will let go of the shift key
+
+# Export the macro as a bat file
+km.export_bat("my_macro.bat")
 ```
 
 ### Reading instructions from strings
+
+```python
+
+```
 
 ### Reading instructions from .txt files
 
