@@ -31,7 +31,7 @@ km.export_bat("my_macro.bat")
 ### Reading instructions from strings
 Instead of using the action functions, you can have the macro read a set of instructions from a string.
 ```python
-#Let's have the macro write a sentence, highlight it, cut it, and paste it twice
+# Let's have the macro write a sentence, highlight it, cut it, and paste it twice
 instructions='''
 WAIT 2
 TYPE This sentence was written by a bot.{SPACE}
@@ -56,19 +56,19 @@ Alternatively, you can also read instructions from a .txt file. The formatting i
 # Comments can be added but must be written on separate lines from instruction lines
 # Let's have the macro open the Notepad program using the Windows start menu
 TYPE {win}
-WAIT 2
+WAIT 2.0
 TYPE notepad{enter}
-WAIT 3
+WAIT 3.0
 
 # Now let's have the macro type a few lines of text
 # And let's try to include as many unusual characters as possible
-TYPE The atmosphere is 78% nitrogen{enter}
+TYPE Last week, I visited a nice b&b in France{enter}
 TYPE In English, we say "Good day!"{enter}
 TYPE But in French, they say << Bonjour! >>{enter}
-TYPE Last week, I visited a nice b&b{enter}
+TYPE The atmosphere is 78% nitrogen{enter}
 TYPE Pipes, carets and an underscore can make an emoji: |^_^|
 
-# Now we'll save the file
+# Now we'll have the macro save the text it wrote
 # Note, for HOLD and LIFT, only the first letter of the key is necessary (c=CTRL,a=ALT,s=SHIFT)
 HOLD c
 TYPE s
