@@ -50,12 +50,40 @@ km.export_bat()
 
 
 ### Reading instructions from .txt files
-
+Alternatively, you can also read instructions from a .txt file. The formatting is the same as for strings.
 ```text
+### ./instructions.txt ###
+# Comments can be added but must be written on separate lines from instruction lines
+# Let's have the macro open the notepad program using the Windows start menu
+TYPE {win}
+WAIT 2
+TYPE notepad{enter}
+WAIT 3
+
+# Now let's have the macro type a few lines of text
+# And let's try to include as many unusual characters as possible
+TYPE The atmosphere is 78% nitrogen{enter}
+TYPE In English we say "Good day!"{enter}
+TYPE But in French they say << Bonjour! >>{enter}
+TYPE Last week, I visited a nice b&b{enter}
+TYPE Pipes, carets and an underscore can make an emoji: |^_^|
+
+# Now we'll save the file
+# Note, for HOLD and LIFT, only the first letter of the key is necessary (c=CTRL,a=ALT,s=SHIFT)
+HOLD c
+TYPE s
+LIFT c
+WAIT 0.5
+TYPE winkemmpy_demo.txt
+WAIT 0.5
+TYPE {enter}
+'''
 ```
 Generated the macro in python from the .txt file.
 ```python
-
+km = kemm.KeyboardMacro()
+km.read_txt("instructions.txt")
+km.export_bat("write_a_winkemmpy_demo.bat")
 ```
 
 ## Special Characters
