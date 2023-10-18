@@ -8,6 +8,9 @@ In essence, WinKeMMPy allows you to write a keyboard macro in Python and export 
 
 Caveat: The exported bat file uses Powershell to implement the keyboard simulation. All Windows versions since Windows 7 have Powershell installed by default. So as long as Powershell is not disabled or uninstalled on the system, the bat file should run correctly.
 
+## Live Demo
+Try out WinKeMMPy in a live notebook environment using Google Colab. Link [here](https://colab.research.google.com/drive/1EjgqKhPgE26ISjTpGgwZZ4rSH4lCnvjl?usp=sharing).
+
 ## Usage Examples
 ### Basic
 An example using all four basic action functions: `type`, `wait`, `hold`, and `lift`.
@@ -77,7 +80,6 @@ WAIT 0.5
 TYPE winkemmpy_demo.txt
 WAIT 0.5
 TYPE {enter}
-'''
 ```
 Generate the macro in Python from the .txt file.
 ```python
@@ -87,6 +89,12 @@ km.export_bat("write_a_winkemmpy_demo.bat")
 ```
 
 ## Special Characters
+
+Certain keyboard keys have special character codes that can be used to type to type them. A character code is always enveloped in braces { }. For example, `{ENTER}` corresponds to the enter key. Note that if you need to type a brace, you can use `{RIGHTB}` for a right brace ( { ) and `{LEFTB}` for a left brace ( } ). A list of all accepted special characters can be found here.
+
+## Live Demo
+Try out WinKeMMPy in a live notebook environment using Google Colab. Link [here](https://colab.research.google.com/drive/1EjgqKhPgE26ISjTpGgwZZ4rSH4lCnvjl?usp=sharing).
+
 
 | Special Character | Description |
 | --- | --- |
