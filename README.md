@@ -8,9 +8,6 @@ In essence, WinKeMMPy allows you to write a keyboard macro in Python and export 
 
 Caveat: The exported bat file uses Powershell to implement the keyboard simulation. All Windows versions since Windows 7 have Powershell installed by default. So as long as Powershell is not disabled or uninstalled on the system, the bat file should run correctly.
 
-## Live Demo
-Try out WinKeMMPy in a live notebook environment using Google Colab. Link [here](https://colab.research.google.com/drive/1EjgqKhPgE26ISjTpGgwZZ4rSH4lCnvjl?usp=sharing).
-
 ## Usage Examples
 ### Basic
 An example using all four basic action functions: `type`, `wait`, `hold`, and `lift`.
@@ -89,60 +86,8 @@ km.export_bat("write_a_winkemmpy_demo.bat")
 ```
 
 ## Special Characters
-
-Certain keyboard keys have special character codes that can be used to type to type them. A character code is always enveloped in braces { }. For example, `{ENTER}` corresponds to the enter key. Note that if you need to type a brace, you can use `{RIGHTB}` for a right brace ( { ) and `{LEFTB}` for a left brace ( } ). A list of all accepted special characters can be found here.
+Certain keyboard keys have special character codes that can be used to type them. A character code is always enveloped by a pair of braces { }. For example, `{ENTER}` corresponds to the enter key. Note that if you need to type a brace, you can use `{RIGHTB}` for a right brace and `{LEFTB}` for a left brace. A list of all accepted special characters can be found [here](SPECIALCHARS.md).
 
 ## Live Demo
 Try out WinKeMMPy in a live notebook environment using Google Colab. Link [here](https://colab.research.google.com/drive/1EjgqKhPgE26ISjTpGgwZZ4rSH4lCnvjl?usp=sharing).
 
-
-| Special Character | Description |
-| --- | --- |
-| {ADD} | Keypad add |
-| {BACKSPACE} | Backspace |
-| {BKSP} | Backspace |
-| {BREAK} | Break |
-| {BS} | Backspace |
-| {CAPSLOCK} | Caps lock |
-| {DELETE} | Del or delete |
-| {DEL} | Del or delete |
-| {DIVIDE} | Keypad divide |
-| {DOWN} | Down arrow |
-| {END} | End |
-| {ENTER} | Enter |
-| {ESC} | Esc |
-| {F10} | F10 |
-| {F11} | F11 |
-| {F12} | F12 |
-| {F13} | F13 |
-| {F14} | F14 |
-| {F15} | F15 |
-| {F16} | F16 |
-| {F1} | F1 |
-| {F2} | F2 |
-| {F3} | F3 |
-| {F4} | F4 |
-| {F5} | F5 |
-| {F6} | F6 |
-| {F7} | F7 |
-| {F8} | F8 |
-| {F9} | F9 |
-| {HELP} | Help |
-| {HOME} | Home |
-| {INSERT} | Ins or insert |
-| {INS} | Ins or insert |
-| {LEFTB} | Left bracket ( { ) |
-| {LEFT} | Left arrow |
-| {MULTIPLY} | Keypad multiply |
-| {NUMLOCK} | Num lock |
-| {PGDN} | Page down |
-| {PGUP} | Page up |
-| {PRTSC} | Print screen (may not work) |
-| {RIGHTB} | Right bracket ( } ) |
-| {RIGHT} | Right arrow |
-| {SCROLLLOCK} | Scroll lock |
-| {SPACE} | Spacebar |
-| {SUBTRACT} | Keypad subtract |
-| {TAB} | Tab |
-| {UP} | Up arrow |
-| {WIN} | Windows key (simulated by ctrl+esc) |
