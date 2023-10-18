@@ -2,11 +2,11 @@
 
 ## Description
 
-A pythonic way to make self-contained no-dependency keyboard macro programs.
+A pythonic way to make self-contained low-dependency keyboard macro programs.
 
-In essence, WinKeMMPy allows you to write a keyboard macro in Python and export it as a batch file that can be run on desktop Windows with (essentially) no dependencies.
+In essence, WinKeMMPy allows you to write a keyboard macro in Python and export it as a batch file that can be run on desktop Windows with (virtually) no dependencies.
 
-Caveat: The exported bat file uses Powershell to implement the keyboard simulation. All Windows versions since Windows 7 have Powershell installed by default. So as long as Powershell is not be disabled or uninstalled on the system, the macro should work.
+Caveat: The exported bat file uses Powershell to implement the keyboard simulation. All Windows versions since Windows 7 have Powershell installed by default. So as long as Powershell is not disabled or uninstalled on the system, the bat file should run correctly.
 
 ## Usage Examples
 ### Basic
@@ -31,7 +31,7 @@ km.export_bat("my_macro.bat")
 ### Reading instructions from strings
 Instead of using the action functions, you can have the macro read a set of instructions from a string.
 ```python
-#Let's have the macro write a sentence, highlight it, cut it, and pste it twice
+#Let's have the macro write a sentence, highlight it, cut it, and paste it twice
 instructions='''
 WAIT 2
 TYPE This sentence was written by a bot.{SPACE}
@@ -63,8 +63,8 @@ WAIT 3
 # Now let's have the macro type a few lines of text
 # And let's try to include as many unusual characters as possible
 TYPE The atmosphere is 78% nitrogen{enter}
-TYPE In English we say "Good day!"{enter}
-TYPE But in French they say << Bonjour! >>{enter}
+TYPE In English, we say "Good day!"{enter}
+TYPE But in French, they say << Bonjour! >>{enter}
 TYPE Last week, I visited a nice b&b{enter}
 TYPE Pipes, carets and an underscore can make an emoji: |^_^|
 
@@ -79,7 +79,7 @@ WAIT 0.5
 TYPE {enter}
 '''
 ```
-Generated the macro in python from the .txt file.
+Generate the macro in Python from the .txt file.
 ```python
 km = kemm.KeyboardMacro()
 km.read_txt("instructions.txt")
