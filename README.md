@@ -86,7 +86,11 @@ km.export_bat("write_a_winkemmpy_demo.bat")
 ```
 
 ## Special Characters
-Certain keyboard keys have special character codes that can be used to type them. A character code is always enveloped by a pair of braces { }. For example, `{ENTER}` corresponds to the enter key. Note that if you need to type a brace, you can use `{RIGHTB}` for a right brace and `{LEFTB}` for a left brace. A list of all accepted special characters can be found [here](SPECIALCHARS.md).
+Certain keyboard keys have special character codes that can be used to type them. A character code is always enveloped by a pair of braces { }. For example, `{ENTER}` corresponds to the enter key. 
+
+Note that if you need to type a brace, you can use `{RIGHTB}` for a right brace and `{LEFTB}` for a left brace. 
+
+A list of all accepted special characters can be found [here](SPECIALCHARS.md).
 
 ## Live Demo
 Try out WinKeMMPy in a live notebook environment using Google Colab. Link [here](https://colab.research.google.com/drive/1EjgqKhPgE26ISjTpGgwZZ4rSH4lCnvjl?usp=sharing).
