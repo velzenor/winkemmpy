@@ -54,7 +54,7 @@ Alternatively, you can also read instructions from a .txt file. The formatting i
 ```text
 ### ./instructions.txt ###
 # Comments can be added but must be written on separate lines from instruction lines
-# Let's have the macro open the notepad program using the Windows start menu
+# Let's have the macro open the Notepad program using the Windows start menu
 TYPE {win}
 WAIT 2
 TYPE notepad{enter}
